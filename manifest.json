@@ -1,0 +1,47 @@
+{
+  "manifest_version": 3,
+  "name": "Lumawig",
+  "version": "1.0",
+  "description": "Word Enhancement Program",
+  "icons": {
+    "16": "image/lumawig-16.png",
+    "48": "image/lumawig-48.png",
+    "128": "image/lumawig-128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "image/favicon.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>", "https://www.facebook.com/*", "https://messenger.com/*", "https://*/*"],
+      "js": ["content.js"]
+    }
+  ],
+
+  "commands": {
+    "extract_text": {
+      "suggested_key": {
+        "default": "Ctrl+Q",
+        "mac": "Command+Q"
+      },
+      "description": "Spell Correction"
+    },
+    "predict_word": {
+      "suggested_key": {
+        "default": "Ctrl+B",
+        "mac": "Command+B"
+      },
+      "description": "Next Word Prediction"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "tabs",
+    "storage",
+    "activeTab"
+  ]
+}

@@ -1,0 +1,32 @@
+body {
+  font-family: Arial, sans-serif;
+}
+#panel {
+  background-color: #b8dd33;
+  padding: 10px;
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  color: #000000;
+  background-color: #fff;
+  border: 1px solid #505255;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+button.active-spellcheck {
+  background-color: rgb(105, 221, 69);
+}
+
+button.active-nwp {
+  background-color: orange;
+}
